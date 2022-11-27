@@ -12,4 +12,11 @@ public class RpcResponse {
     private String error;
 
     private Object result;
+
+    public RpcResponse() {
+    }
+
+    public RpcResponse(String id) {
+        this.id = id;
+    }
 }
