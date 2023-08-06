@@ -1,6 +1,7 @@
 package pers.swd.rpc.provider.handler;
 
-import com.alibaba.fastjson2.JSON;
+import com.alibaba.fastjson.JSON;
+import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 import org.springframework.beans.BeansException;
@@ -18,6 +19,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+@ChannelHandler.Sharable
 @Component
 public class RpcServerHandler extends SimpleChannelInboundHandler<String> implements ApplicationContextAware {
 
